@@ -1,4 +1,4 @@
-
+///// this is simple code ....... 
 public class Main
 {
     
@@ -20,4 +20,34 @@ for(int i=0; i<num.length; i++){
 }
 
 	}
+}
+///////////////////// Using function 
+public class Main {
+
+    static int[] multiply(int arr[]) {
+  
+ 
+  int size = arr.length;
+  
+    int[] newArray = new int[size];
+  
+  for(int i=0; i<size; i++){
+      
+      int element=arr[i];
+      int newelement =  element*10;
+      newArray[i] = newelement;
+  }
+  
+  return newArray;
+    
+}
+    public static void main(String[] args) {
+ 
+  int arr[] = {1,2,3,4,5};
+  int ans[] = multiply(arr);
+  
+  for(int i : ans){
+      System.out.println(i);
+  }
+    }
 }
