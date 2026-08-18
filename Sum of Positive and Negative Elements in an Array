@@ -1,0 +1,51 @@
+//////////////////////////////
+
+public class Main {
+    
+    static int[] Display(int [] arr){
+        
+        int postivesum = 0;
+        int negativesum = 0;
+        
+        for(int i=0; i<arr.length; i++){
+            
+            if(arr[i] > 0){
+                postivesum = postivesum + arr[i];
+                
+            }
+            else if(arr[i] < 0){
+                negativesum =  negativesum+ arr[i];
+            }
+        }
+        int ans[] = { postivesum, negativesum};
+        return ans;
+    }
+    
+    public static void main(String[] args) {
+ 
+ int arr[] = {1,-2,5,-3,4};
+ int ans[] = Display(arr);
+ System.out.println("positve nnumber = " + ans[0]);
+ System.out.println("negative number = "  + ans[1]);
+ 
+
+
+    }
+    
+}
+    Output
+Positive number = 10
+Negative number = -5
+Sabse important point 🧠
+
+Tumhara function:
+
+static int[] Display(int[] arr)
+
+int[] → array return karega
+
+Aur:
+
+int[] ans = Display(arr);
+
+ans → returned array ko store karega
