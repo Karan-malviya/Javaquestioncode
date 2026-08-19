@@ -1,0 +1,65 @@
+////////////////////////////////////
+simple way 
+
+✅ Print the intersection elements of two arrays.
+
+public class Main {
+    public static void main(String[] args) {
+
+        int arr[] = {1, 2, 3, 4, 5};
+        int arr2[] = {2, 5, 6, 7, 8};
+
+        for (int i = 0; i < arr.length; i++) {
+
+            for (int j = 0; j < arr2.length; j++) {
+
+                if (arr[i] == arr2[j]) {
+                    System.out.print( " intersection arry " + arr[i]);
+                }
+            }
+        }
+    }
+}
+/////////////////////////////////////////////
+using function 
+
+
+
+public class Main {
+
+    static int[] display(int arr[], int arr2[]) {
+
+        int[] ans = new int[arr.length]; ///////////////////////////////// Ek naya integer array banao jisme hum intersection elements store karenge.
+                                                                          ans = {0, 0, 0, 0, 0} ...
+ 
+        int k = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+
+            for (int j = 0; j < arr2.length; j++) {
+
+                if (arr[i] == arr2[j]) {
+                    ans[k] = arr[i];
+                    k++;
+                }
+            }
+        }
+
+        return ans;
+    }
+
+    public static void main(String[] args) {
+
+        int arr[] = {1, 2, 3, 4, 5};
+        int arr2[] = {2, 5, 6, 7, 8};
+
+        int ans[] = display(arr, arr2);
+
+        for (int i = 0; i < ans.length; i++) {
+
+            if (ans[i] != 0) {
+                System.out.print(ans[i] + " ");
+            }
+        }
+    }
+}   
